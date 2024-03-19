@@ -11,7 +11,21 @@
   </head>
 
   <body>
-    <h1>Laravel with Bootstrap + Vite</h1>
+    <div class="container">
+      <h1>Movies</h1>
+      <div class="row gx-3">
+        @foreach ($movies as $movie)
+          <div class="col-2 m-3">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h4 class="card-title">{{ $movie['title'] }}</h4>
+                <h4 class="card-title">{{ $movie['original_title'] }}</h4>
+                <p class="card-text">{{ $movie['nationality'] }}</p>
+              </div>
+            </div>
+          </div>
+        @endforeach
+      </div>
+    </div>
   </body>
-
 </html>
